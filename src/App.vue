@@ -69,6 +69,8 @@ a {
     width: 700px;
     min-height: 800px;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px;
   }
 }
 </style>

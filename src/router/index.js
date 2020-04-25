@@ -5,9 +5,9 @@ const routes = [{
     name: 'Home',
     component: () => import('../pages/Home.vue')
 }, {
-    path: '/about',
-    name: 'About',
-    component: () => import('../pages/About.vue')
+    path: '/watch',
+    name: 'Watch',
+    component: () => import('../pages/Watch.vue')
 }]
 
 const router = createRouter({

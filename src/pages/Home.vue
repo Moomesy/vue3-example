@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="page-home">
     <div>时间戳：{{timestamp}}</div>
     <div>格式化时间：{{time}}</div>
     <div>无法观测：{{tmp.aaa}}[{{tmp.updatedTime}}]</div>
