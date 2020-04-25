@@ -1,11 +1,13 @@
+import { inject } from 'vue'
+
 const helper = {
-    formatTimestamp: (time)=>{
+    formatTimestamp: (time) => {
         const date = new Date(time);
         return date.toLocaleString() + '.' + date.getMilliseconds()
     }
 }
-const pluginName = '$helper';
-
+const pluginName = Symbol('helper');
+const useHelper = () => inject(pluginName);
 export default {
     install: (app) => {
         app.config.globalProperties[pluginName] = helper
@@ -15,3 +17,6 @@ export default {
         app.provide(pluginName, helper);
     }
 };
+export {
+    useHelper
+}
