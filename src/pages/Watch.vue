@@ -1,26 +1,26 @@
 <template>
   <div id="page-watch">
     <div @click="time=Math.random()">{{time}}</div>
+    <div><div v-html="changeLog"></div></div>
   </div>
 </template>
 
 <script>
-import { ref, watchEffect, nextTick } from "vue";
-import { useRouter } from "../useApi";
+import { ref, watch, nextTick } from "vue";
 
 export default {
   setup() {
-    const router = useRouter().currentRoute.value;
-    console.log(router)
     const time = ref(new Date().getTime());
+    const changeLog = ref('');
 
     // 观测演示
-    watchEffect(() => {
-      
+    watch(time, (newVal, oldTime) => {
+        changeLog.value = `NEW:${newVal} => OLD:${oldTime}<br/>` + changeLog.value
     });
 
     return {
-      time
+      time,
+      changeLog
     };
   }
 };
