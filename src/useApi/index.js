@@ -1,6 +1,7 @@
 import { inject, getCurrentInstance } from 'vue'
 import { useRouter } from 'vue-router'
 import { useHelper } from '../library/helper'
+import { useHttp } from '../library/http'
 
 
 // ES6 Symbol是为了防止重复
@@ -10,5 +11,6 @@ import { useHelper } from '../library/helper'
 
 export {
     useRouter,
-    useHelper
+    useHelper,
+    useHttp
 };

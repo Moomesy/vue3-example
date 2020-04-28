@@ -19,7 +19,7 @@ import {
   watchEffect,
   nextTick
 } from "vue";
-import { useHelper } from "../useApi";
+import { useHelper } from "../../useApi";
 
 export default {
   setup() {
